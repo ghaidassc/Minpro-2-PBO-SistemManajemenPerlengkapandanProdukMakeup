@@ -371,10 +371,9 @@ Superclass `Makeup` memiliki method dasar:
 Method `tampilkanData()` pada superclass `Makeup` yang menjadi asal method overriding.       
 Method tersebut kemudian dioverride oleh masing-masing subclass untuk menambahkan keterangan spesifik sesuai jenis barangnya:  
 <img width="324" height="85" alt="image" src="https://github.com/user-attachments/assets/e5609bb6-aaa9-44da-afdf-a23639d5b223" />    
-Penerapan method overriding `tampilkanData()` pada subclass `ProdukMakeup` untuk menampilkan kategori dan shade.   
-pada `ProdukMakeup`, dan:    
+Penerapan method overriding `tampilkanData()` pada subclass `ProdukMakeup` untuk menampilkan kategori dan shade pada `ProdukMakeup`, dan:      
 <img width="345" height="84" alt="image" src="https://github.com/user-attachments/assets/dceb8368-aee1-49bb-97fc-5ef109c832a6" />     
-Penerapan method overriding `tampilkanData()` pada subclass `PerlengkapanMakeup` untuk menampilkan kategori dan material.    pada `PerlengkapanMakeup`.   
+Penerapan method overriding `tampilkanData()` pada subclass `PerlengkapanMakeup` untuk menampilkan kategori dan material pada `PerlengkapanMakeup`.       
 
 
 
