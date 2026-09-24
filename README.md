@@ -326,15 +326,18 @@ Atribut `id` dideklarasikan menggunakan kata kunci `final` dan hanya dilengkapi 
 ## 6.3 Inheritance    
 Inheritance digunakan dengan membuat class `Makeup` sebagai superclass yang memiliki atribut dan method umum untuk seluruh kategori barang rias.  
 Dua subclass mewarisi class tersebut:  
-<img width="256" height="13" alt="image" src="https://github.com/user-attachments/assets/336f7251-f32a-4ae7-8c97-20e069ced08a" />   
+<img width="256" height="13" alt="image" src="https://github.com/user-attachments/assets/336f7251-f32a-4ae7-8c97-20e069ced08a" />         
+
 Penerapan inheritance pada class `ProdukMakeup` melalui keyword `extends` dan penggunaan `super()` untuk memanggil constructor superclass `Makeup`.    
 
-<img width="295" height="12" alt="image" src="https://github.com/user-attachments/assets/7aacf6d7-73d9-417e-94eb-8d24adfdf8bf" />    
+<img width="295" height="12" alt="image" src="https://github.com/user-attachments/assets/7aacf6d7-73d9-417e-94eb-8d24adfdf8bf" />        
+
 Penerapan inheritance pada class `PerlengkapanMakeup` sebagai subclass kedua dari superclass `Makeup`.    
 
 Pada constructor subclass digunakan `super()` untuk menginisialisasi atribut dasar (`id`, `nama`, `merk`, `harga`, `stok`) yang berasal dari superclass `Makeup`.     
 
-<img width="638" height="58" alt="image" src="https://github.com/user-attachments/assets/7138617b-6731-4a5b-96a4-9fa074aad9bf" />      
+<img width="638" height="58" alt="image" src="https://github.com/user-attachments/assets/7138617b-6731-4a5b-96a4-9fa074aad9bf" />         
+
 Inisialisasi constructor superclass menggunakan `super()` pada subclass.    
 
 Dengan inheritance, atribut dan perilaku umum tidak perlu ditulis berulang pada masing-masing subclass, sehingga struktur kode menjadi lebih modular dan efisien.    
