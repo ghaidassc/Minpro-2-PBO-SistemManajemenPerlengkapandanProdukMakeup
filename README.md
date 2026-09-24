@@ -324,17 +324,19 @@ Penerapan encapsulation melalui method getter dan setter pada class Makeup.
 Atribut `id` dideklarasikan menggunakan kata kunci `final` dan hanya dilengkapi method getter `getId()`. Method `setId()` sengaja ditiadakan karena ID berperan sebagai nomor pengenal permanen yang tidak boleh dimodifikasi setelah barang dibuat. Hal ini sekaligus menyelesaikan catatan evaluasi mengenai peniadaan kode mubazir (*dead code*). Atribut lainnya (`nama`, `merk`, `harga`, `stok`, `shade`, dan `material`) memiliki pasangan *getter* dan *setter* yang aktif digunakan dalam operasi controller saat fitur ubah dan cetak data dijalankan. Dengan demikian, data tidak diberikan akses langsung dari luar class, melainkan melalui method yang disediakan secara terkontrol oleh class tersebut.             
 
 ## 6.3 Inheritance    
-Inheritance digunakan dengan membuat class `Makeup` sebagai superclass yang memiliki atribut dan method umum untuk seluruh kategori barang rias.  
-Dua subclass mewarisi class tersebut:  
+Inheritance digunakan dengan membuat class `Makeup` sebagai superclass yang memiliki atribut dan method umum untuk seluruh kategori barang rias.     
+
+**a. Penerapan inheritance pada class `ProdukMakeup`**  
 <img width="256" height="13" alt="image" src="https://github.com/user-attachments/assets/336f7251-f32a-4ae7-8c97-20e069ced08a" />         
 
-Penerapan inheritance pada class `ProdukMakeup` melalui keyword `extends` dan penggunaan `super()` untuk memanggil constructor superclass `Makeup`.      
+Penerapan inheritance pada class `ProdukMakeup` melalui keyword `extends` dan penggunaan `super()` untuk memanggil constructor superclass `Makeup`.  
+**b. Penerapan inheritance pada class `PerlengkapanMakeup`**     
 <img width="295" height="12" alt="image" src="https://github.com/user-attachments/assets/7aacf6d7-73d9-417e-94eb-8d24adfdf8bf" />        
 
 Penerapan inheritance pada class `PerlengkapanMakeup` sebagai subclass kedua dari superclass `Makeup`.    
 
 Pada constructor subclass digunakan `super()` untuk menginisialisasi atribut dasar (`id`, `nama`, `merk`, `harga`, `stok`) yang berasal dari superclass `Makeup`.     
-
+**c. Inisialisasi constructor superclass menggunakan `super()`**
 <img width="638" height="58" alt="image" src="https://github.com/user-attachments/assets/7138617b-6731-4a5b-96a4-9fa074aad9bf" />         
 
 Inisialisasi constructor superclass menggunakan `super()` pada subclass.    
