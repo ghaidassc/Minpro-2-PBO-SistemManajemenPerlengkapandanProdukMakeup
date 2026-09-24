@@ -369,6 +369,7 @@ Struktur package program yang menunjukkan pemisahan class menjadi package `main`
 Superclass `Makeup` memiliki method dasar:   
 <img width="306" height="99" alt="image" src="https://github.com/user-attachments/assets/387a1917-7891-4fab-b20c-059b237ee7be" />       
 Method `tampilkanData()` pada superclass `Makeup` yang menjadi asal method overriding.       
+
 Method tersebut kemudian dioverride oleh masing-masing subclass untuk menambahkan keterangan spesifik sesuai jenis barangnya:  
 <img width="324" height="85" alt="image" src="https://github.com/user-attachments/assets/e5609bb6-aaa9-44da-afdf-a23639d5b223" />    
 Penerapan method overriding `tampilkanData()` pada subclass `ProdukMakeup` untuk menampilkan kategori dan shade pada `ProdukMakeup`, dan:      
