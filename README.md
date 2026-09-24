@@ -340,7 +340,7 @@ Pada constructor subclass digunakan `super()` untuk menginisialisasi atribut das
 
 
 ### 3. Inisialisasi constructor superclass menggunakan super()     
-<img width="638" height="58" alt="image" src="https://github.com/user-attachments/assets/7138617b-6731-4a5b-96a4-9fa074aad9bf" />         
+<img width="638" height="58" alt="image" src="https://github.com/user-attachments/assets/7138617b-6731-4a5b-96a4-9fa074aad9bf" />              
 Inisialisasi constructor superclass menggunakan `super()` pada subclass.    
 
 Dengan inheritance, atribut dan perilaku umum tidak perlu ditulis berulang pada masing-masing subclass, sehingga struktur kode menjadi lebih modular dan efisien.    
