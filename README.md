@@ -328,8 +328,7 @@ Inheritance digunakan dengan membuat class `Makeup` sebagai superclass yang memi
 Dua subclass mewarisi class tersebut:  
 <img width="256" height="13" alt="image" src="https://github.com/user-attachments/assets/336f7251-f32a-4ae7-8c97-20e069ced08a" />         
 
-Penerapan inheritance pada class `ProdukMakeup` melalui keyword `extends` dan penggunaan `super()` untuk memanggil constructor superclass `Makeup`.    
-
+Penerapan inheritance pada class `ProdukMakeup` melalui keyword `extends` dan penggunaan `super()` untuk memanggil constructor superclass `Makeup`.      
 <img width="295" height="12" alt="image" src="https://github.com/user-attachments/assets/7aacf6d7-73d9-417e-94eb-8d24adfdf8bf" />        
 
 Penerapan inheritance pada class `PerlengkapanMakeup` sebagai subclass kedua dari superclass `Makeup`.    
