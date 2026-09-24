@@ -132,7 +132,7 @@ Proses  Proses        Proses        Proses     Selesai│
           Kembali ke Menu ────────────────────────────┘
 ```
 
-## 5.1 Alur Tambah Barang  
+## 5.2 Alur Tambah Barang  
 Fitur Tambah Data Barang digunakan untuk membuat entitas data barang baru, baik berupa produk kosmetik maupun perlengkapan alat.
 
 Urutan prosesnya adalah:  
@@ -195,3 +195,148 @@ Setiap input teks dan angka memiliki validasi ketat dengan batas maksimal 3 kali
 Pilihan kategori menentukan pembuatan objek subclass:
 1. Produk Makeup menghasilkan objek ProdukMakeup dan meminta masukan data varian/shade.  
 2. Perlengkapan Makeup menghasilkan objek PerlengkapanMakeup dan meminta masukan data material bahan.  
+
+**Bukti output proses tambah produk makeup**  
+<img width="290" height="204" alt="image" src="https://github.com/user-attachments/assets/006320a3-27b8-460d-b06c-387eb97bc844" />     
+Proses penambahan produk rias kosmetik (ProdukMakeup) hingga data berhasil disimpan.
+
+**Bukti output proses tambah perlengkapan makeup**  
+<img width="287" height="206" alt="image" src="https://github.com/user-attachments/assets/2eac8902-1570-4fcc-b8d7-57343007dcad" />    
+Proses penambahan perlengkapan alat rias (PerlengkapanMakeup) hingga data berhasil disimpan.      
+
+## 5.3 Tampilkan Semua Barang  
+Fitur Tampilkan Semua Barang digunakan untuk mencetak seluruh barang inventaris yang tersimpan di dalam ArrayList<Makeup>.  
+<img width="143" height="329" alt="image" src="https://github.com/user-attachments/assets/f442fd38-7ba0-44cc-9f0d-9037516dfe5a" />    
+Tampilan inventaris pada fitur Tampilkan Semua Barang, termasuk data dummy yang tersedia sejak awal.  
+
+Data dummy dimuat saat controller pertama kali diinisialisasi sehingga saat fitur ini dipilih pertama kali, data langsung tersaji rapi.  
+```text
+Pilih Menu Tampilkan Semua Barang
+              ↓
+Controller mengakses ArrayList
+              ↓
+View menerima koleksi ArrayList<Makeup>
+              ↓
+Perulangan membaca tiap objek
+              ↓
+Method polimorfik tampilkanData()
+              ↓
+Rincian barang tampil pada terminal
+```
+## 5.4 Alur Ubah Data Barang  
+Fitur Ubah Data Barang digunakan untuk memperbarui rincian barang berdasarkan ID yang dimasukkan pengguna.  
+<img width="185" height="200" alt="image" src="https://github.com/user-attachments/assets/c66135e8-45f5-4346-86a4-337e5177070b" />    
+Proses pembaruan data barang berdasarkan ID dengan pemanggilan method overloading saat menampilkan data lama.  
+
+```text   
+Pilih Ubah Data Barang. 
+                         │
+                         ▼
+        ┌► Input ID Barang yang Dicari ◄────────┐
+        │                │                      │
+        │                ▼                      │
+        │      Cari Barang via ID               │
+        │                │                      │
+        │                ▼                      │
+        │        Data ditemukan?                │
+        │          ┌─────┴─────┐                │
+        │        Tidak        Ya                │
+        │          │           │                │
+        │          ▼           ▼                │
+        └── Data Tidak Ada   Tampilkan Detail   │
+                             Data Saat Ini      │
+                               │                │
+                               ▼                │
+                        Input Data Baru         │
+                    (Kosongkan jika skip)       │
+                               │                │
+                               ▼                │
+                         Update Nilai           │
+                       via Method Setter        │
+                               │                │
+                               ▼                │
+                    Pembaruan Data Berhasil     │
+                               │                │
+                               ▼                │
+                        Kembali ke Menu ────────┘
+```     
+Pengguna dapat memilih atribut mana saja yang ingin diubah (nama, merk, harga, stok, atau atribut subclass). Masukan dapat dikosongkan jika pengguna tidak ingin mengubah nilai atribut tersebut.   
+
+## 5.5 Alur Hapus Data Barang    
+Fitur Hapus Data Barang digunakan untuk menghapus data inventaris dari ArrayList berdasarkan ID.  
+<img width="205" height="68" alt="image" src="https://github.com/user-attachments/assets/b1136ce4-8902-45cc-b61b-a6e4b4048e63" />     
+Proses penghapusan data barang berdasarkan ID dengan konfirmasi pengguna.    
+
+Sebelum data dihapus, sistem menampilkan nama barang dan meminta konfirmasi persetujuan (y/n) agar barang tidak terhapus tanpa sengaja. 
+
+```text   
+Pilih Hapus Data Barang
+                         │
+                         ▼
+        ┌► Input ID Barang yang Dicari
+        │                │
+        │                ▼
+        │        Cari Barang via ID
+        │                │
+        │                ▼
+        │        Data ditemukan?
+        │          ┌─────┴─────┐
+        │        Tidak        Ya
+        │          │           │
+        │          ▼           ▼
+        └── Data Tidak Ada   Tampilkan Konfirmasi
+                             Penghapusan Barang
+                               │
+                               ▼
+                       Konfirmasi (y/n)?
+                         ┌─────┴─────┐
+                         │           │
+                         ▼           ▼
+                        'y'         'n'
+                         │           │
+                         ▼           ▼
+                    Hapus dari     Batal
+                    ArrayList        │
+                         │           │
+                         └─────┬─────┘
+                               │
+                               ▼
+                        Kembali ke Menu
+```
+
+## 5.6 Alur Keluar Program  
+Ketika pengguna memasukkan opsi 5 pada menu utama, sistem mengubah status perulangan menjadi false, menampilkan pesan penutup program, dan mengakhiri sesi terminal.       
+<img width="200" height="34" alt="image" src="https://github.com/user-attachments/assets/57a4c0fd-0722-465d-a2a1-8f805dfd9230" />      
+Tampilan saat program selesai dan keluar dari sistem.     
+
+# 6. Penerapan Ketentuan OOP    
+## A. Access Modifier  
+Access modifier digunakan untuk membatasi dan mengatur hak akses pada atribut maupun method di dalam class.     
+Pada superclass Makeup, seluruh atribut inti menggunakan kata kunci private:   
+```text 
+private final String id;
+private String nama;
+private String merk;
+private double harga;
+private int stok;
+```     
+Atribut private tersebut menjamin bahwa variabel tidak dapat diakses atau diubah secara langsung dari luar class. Akses data hanya dapat dilakukan melalui method resmi yang disediakan.  
+
+## B. Encapsulation   
+Encapsulation diwujudkan dengan menyembunyikan variabel menggunakan modifier private dan membukanya secara aman lewat perantara method getter serta setter.  
+```text 
+public String getId() {
+        return id;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+```
+Penerapan encapsulation melalui method getter dan setter pada class Makeup.           
+Atribut `id` dideklarasikan menggunakan kata kunci `final` dan hanya dilengkapi method getter `getId()`. Method `setId()` sengaja ditiadakan karena ID berperan sebagai nomor pengenal permanen yang tidak boleh dimodifikasi setelah barang dibuat. Hal ini sekaligus menyelesaikan catatan evaluasi mengenai peniadaan kode mubazir (*dead code*). Atribut lainnya (`nama`, `merk`, `harga`, `stok`, `shade`, dan `material`) memiliki pasangan *getter* dan *setter* yang aktif digunakan dalam operasi controller saat fitur ubah dan cetak data dijalankan. Dengan demikian, data tidak diberikan akses langsung dari luar class, melainkan melalui method yang disediakan secara terkontrol oleh class tersebut.             
+
