@@ -354,6 +354,19 @@ Program menggunakan konsep **Model-View-Controller (MVC)** untuk memisahkan tang
 * **Model** (`Makeup`, `ProdukMakeup`, `PerlengkapanMakeup`) berisi representasi data, relasi pewarisan (inheritance), dan enkapsulasi entitas barang.   
 * **View** (`MakeupView`) menangani tampilan antarmuka pada terminal konsol, mencetak menu, serta membaca input pengguna menggunakan `Scanner`.    
 * **Controller** (`MakeupController`) menangani pengelolaan koleksi data dalam `ArrayList`, logika operasi CRUD, inisialisasi dummy data, serta validasi kesalahan input.     
-* **Main** (`Main`) menjadi *entry point* yang menginisialisasi View dan Controller serta mengontrol perulangan menu utama program.    
+* **Main** (`Main`) menjadi *entry point* yang menginisialisasi View dan Controller serta mengontrol perulangan menu utama program.
+
+Pemisahan ini membuat kode lebih terstruktur, mudah dikembangkan, dan mencegah penumpukan logika di satu file.  
+<img width="240" height="165" alt="image" src="https://github.com/user-attachments/assets/409a7491-88db-4645-a841-e5cc8313f5fa" />       
+Struktur package program yang menunjukkan pemisahan class menjadi package `main`, `model`, `controller`, dan `view` sebagai penerapan arsitektur MVC.      
+
+### 2. Polymorphism
+
+**Polymorphism** diterapkan melalui dua teknik, yaitu **Method Overriding** dan **Method Overloading**, serta pemanfaatan koleksi polimorfik.
+
+#### A. Method Overriding (Dynamic Polymorphism)
+
+Superclass `Makeup` memiliki method dasar:   
+
 
 
