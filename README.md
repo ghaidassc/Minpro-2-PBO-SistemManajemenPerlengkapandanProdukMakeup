@@ -345,7 +345,15 @@ Inisialisasi constructor superclass menggunakan `super()` pada subclass.
 
 Dengan inheritance, atribut dan perilaku umum tidak perlu ditulis berulang pada masing-masing subclass, sehingga struktur kode menjadi lebih modular dan efisien.    
 
+# 7. Penerapan Nilai Tambah    
+Nilai tambah yang diterapkan dalam program adalah:     
 
+### 1. Struktur MVC
 
+Program menggunakan konsep **Model-View-Controller (MVC)** untuk memisahkan tanggung jawab setiap bagian program (*separation of concerns*):
+* **Model** (`Makeup`, `ProdukMakeup`, `PerlengkapanMakeup`) berisi representasi data, relasi pewarisan (inheritance), dan enkapsulasi entitas barang.   
+* **View** (`MakeupView`) menangani tampilan antarmuka pada terminal konsol, mencetak menu, serta membaca input pengguna menggunakan `Scanner`.    
+* **Controller** (`MakeupController`) menangani pengelolaan koleksi data dalam `ArrayList`, logika operasi CRUD, inisialisasi dummy data, serta validasi kesalahan input.     
+* **Main** (`Main`) menjadi *entry point* yang menginisialisasi View dan Controller serta mengontrol perulangan menu utama program.    
 
 
