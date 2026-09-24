@@ -387,7 +387,8 @@ Method yang menerima header digunakan saat proses ubah data di controller untuk 
 
 Polymorphism juga terlihat pada penggunaan koleksi pada controller:   
 <img width="292" height="122" alt="image" src="https://github.com/user-attachments/assets/ee77a527-96cc-4953-b093-4bc3049912c2" />     
-Penggunaan `ArrayList<Makeup>` pada controller yang memungkinkan objek `ProdukMakeup` dan `PerlengkapanMakeup` disimpan dalam satu wadah koleksi yang sama.      
+Penggunaan `ArrayList<Makeup>` pada controller yang memungkinkan objek `ProdukMakeup` dan `PerlengkapanMakeup` disimpan dalam satu wadah koleksi yang sama.    
+
 Walaupun tipe referensinya adalah superclass `Makeup`, objek yang disimpan dapat berupa turunan `ProdukMakeup` maupun `PerlengkapanMakeup`. Ketika method `tampilkanData()` dipanggil dalam perulangan, Java secara dinamis menjalankan implementasi method sesuai objek aslinya.      
 
 
